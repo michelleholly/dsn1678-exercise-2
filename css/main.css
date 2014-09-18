@@ -59,7 +59,7 @@ body {
   width: 7.3%;
 
   background-color: rgba(204,204,204,0);
-  transition: background-color 200ms linear, font-weight 200ms bold;
+
 }
 
 .chart__link,
@@ -94,6 +94,9 @@ body {
 
   background-color: rgba(127, 219, 255, 0.6);
   transition: background-color 1000ms linear;
+    transition: background-color 200ms linear, font-weight 200ms bold;
+    -webkit-animation: slide-up 250ms ease-out;
+    animation: slide-up 250ms ease-out;
 }
 
 .chart__count {
@@ -145,4 +148,22 @@ body {
 .chart__item:hover .chart__count {
     top: -4em;
     opacity: 1;
+}
+
+@-webkit-keyframes slide-up {
+    0%{
+        top: 10em;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+@keyframes slide-up {
+    0%{
+        top: 10em;
+    }
+    100%{
+        top: 0;
+    }
 }
